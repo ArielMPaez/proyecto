@@ -585,10 +585,21 @@
         width: 70%;
         height: auto;
         /* margin: 50%;
-  */
+  */ 
     }
     .footer {
         width: 100%;
+    }
+}
+
+
+@media (max-width: 465px) {
+    .header__slider {
+        height: 15rem; 
+    }
+
+    .section1__tarjeta {
+        width: 70%;
     }
 }
 
