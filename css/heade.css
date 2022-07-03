@@ -557,7 +557,7 @@
 
 
 
-@media (min-width: 370px) and (max-width: 690px) {
+@media (min-width: 360px) and (max-width: 690px) {
     .header__menu {
         width: 100%;
     }
