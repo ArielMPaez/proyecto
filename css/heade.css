@@ -231,6 +231,7 @@
 
 .section2 {
     grid-area: section2;
+    text-align: center;
 }
 
 .section2__article {
@@ -248,15 +249,14 @@
     margin: 20px;
 }
 
-.section2__article p {
-    margin-top: 180px;
-    margin-left: 80px;
+.section2 p {
     font-size: 25px;
-
+    margin: 15px;
 }
 
 .section2__article img {
     border-radius: 20px;
+    box-shadow: 0px 0px 10px 10px;
 
 }
 
@@ -557,7 +557,7 @@
 
 
 
-@media (min-width: 380px) and (max-width: 690px) {
+@media (min-width: 370px) and (max-width: 690px) {
     .header__menu {
         width: 100%;
     }
@@ -594,6 +594,9 @@
 
 
 @media (max-width: 465px) {
+    .header .header__menu h1 {
+        font-size: 25px
+    }
     .header__slider {
         height: 15rem; 
     }
@@ -604,7 +607,7 @@
 }
 
 
-@media (max-width:768px) {
+@media (max-width:868px) {
     .header__menuIcono {
         display: block;
         position: absolute;
