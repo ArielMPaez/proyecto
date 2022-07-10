@@ -92,6 +92,7 @@
 
 
 .header__menu nav ul li a {
+    display: block;
     margin-right: 15px;
     text-decoration: none;
     color: lavenderblush;
@@ -104,7 +105,7 @@
     display: flex;
     font-size: 22px;
     gap: 25px;
-    list-style: none
+    list-style: none;
 }
 
 
@@ -316,28 +317,32 @@
 
 /* CURSOS */
 
-.seccionCurso {
+.seccion__curso {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     border: 5px double black;
     padding: 5px;
     margin: 5px;
     border-radius: 15px;
     background-color: rgb(38, 239, 172);
-}
-
-.seccionCurso {
     text-align: center;
-    width: 100%;
+    width: 100%; 
+    align-items: center;
 }
 
-.seccionCurso img {
-    padding: 15px;
+
+
+.seccion__curso img {
+    padding: 15PX;
 }
 
-.articuloTabla h2 {
+.articulo__tabla h2 {
+    text-align: center;
+}
+
+.articulo__tabla{
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
@@ -403,7 +408,7 @@
     height: 1fr;
 
     
-    z-index: 2;
+    /* z-index: 0; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -482,7 +487,7 @@
 
 @media (min-width: 901px) and (max-width: 1226px) {
     .header__slider {
-        height: 32rem;
+        height: 100%;
     }
 
     .section2 .section2__article img {
@@ -493,19 +498,19 @@
 
 @media (min-width: 691px) and (max-width: 910px) {
     .header__menu {
-        width: 105%;
+        width: 100%;
     }
 
     .header__slider {
-        width: 105%;
+        width: 100%;
         height: 26rem; 
     }
     .section1 {
-        width: 105%;
+        width: 100%;
     }
 
     .section2 {
-        width: 105%;
+        width: 100%;
         
         display: flex;
         flex-direction: column;
@@ -519,8 +524,11 @@
         align-items: center;
     }
     .footer {
-        width: 105%;
+        width: 100%;
     }
+
+    /* CURSOS */
+
 }
 
 
@@ -558,6 +566,18 @@
     .footer {
         width: 100%;
     }
+    
+
+    /* CURSOS */
+    .seccion__curso img {
+        width: 70%;
+        height: auto;
+    }
+
+    .articulo__tabla table {
+        font-size: 90%;
+    } 
+
 }
 
 
@@ -575,6 +595,14 @@
 }
 
 
+
+
+
+
+
+
+
+/* MENU HAMBURGUESA */
 @media (max-width:868px) {
     .header__menuIcono {
         display: block;
@@ -582,16 +610,17 @@
         top: 7px;
         right: 20px;
         cursor: pointer;
-        z-index: 100;
+        z-index: 999;
     }
     .header .header__menu nav ul {
-        display: block;
+        display: none;
         position: fixed;
         margin-top: 0px;
         margin-left: -100%;
         background-color: rgba(0, 0, 0,0.9);
         width: 100%;
-        height: 110vh;              
+        height: 110vh;  
+        transition:all .5            
     }
     .header .header__menu nav ul li {
         padding: 3rem;
@@ -603,7 +632,8 @@
         background: none; 
     }
     #input:checked ~ nav ul{
-        left: 0; 
+        display: block;
+        z-index: 1;
     }
 }
 
