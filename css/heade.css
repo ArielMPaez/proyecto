@@ -126,6 +126,9 @@
 }
 
 
+
+
+
 /* SLIDER */
 
 .header__slider {
@@ -270,6 +273,16 @@
 
 }
 
+
+
+
+
+
+
+
+
+
+/* FOOTER */
 .footer {
     grid-area: footer;
     display: flex;
@@ -293,7 +306,19 @@
     margin-bottom: 5px;
 }
 
-/* FORM */
+
+
+
+
+
+
+
+
+
+
+
+
+/* CONTACOT-FORMULARIO */
 
 .contenedor {
     align-items: center;
@@ -315,6 +340,20 @@
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* CURSOS */
 
 .seccion__curso {
@@ -332,9 +371,17 @@
 
 
 
-.seccion__curso img {
-    padding: 15PX;
+.seccion__curso .img1 {
+    /* padding: 15PX; */
+    width: 40rem;
 }
+
+.seccion__curso .img2 {
+    width: 25rem;
+}
+
+
+
 
 .articulo__tabla h2 {
     text-align: center;
@@ -345,6 +392,19 @@
     justify-content: center;
     text-align: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* GALERIA */
@@ -407,8 +467,7 @@
     width: 100%;
     height: 1fr;
 
-    
-    /* z-index: 0; */
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -457,23 +516,109 @@
 
 
 
+
+
+
+
+
+
+
 /* TIENDA */
 
-.tiendaContenedor {
+.titulo__tienda {
+    text-align: center;
+    font-size: 30px;
+}
+
+
+.tienda {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30rem,1fr));
-    justify-items: center;
-}
-
-.tiendaContenedor__items {
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    margin: auto;
+    width: 98%;
+    gap: 15px;
+    overflow: hidden;
+    background-color: rgb(75, 165, 95);
+    padding: 10px;
+    border-radius: 5px;
     text-align: center;
-    border: black solid 2px;
+    font-size: 20px;
+    text-decoration: none;
 }
 
-.sectionTienda {
+.tienda p {
+    padding-bottom: 20px;
+    color: rgb(84, 50, 122);
+}
+
+.tienda .tienda__contenido {
+    display: block; 
+    position:relative;
+    overflow: hidden; 
+}
+.tienda img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    transition: transform 0.5s;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+    
+.tienda .tienda__contenido:hover img {
+    transform: scale(1.1);
+}
+
+.box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0,.5);
+    transition: transform .4s;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+}
+
+.box img {
+    width: 40%;
+    height: auto;
+    min-height: 100vh; 
+}
+
+
+
+.box:target {
+    transform: scale(1);
+}
+
+.cerrar {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 15rem;
+    background: rgb(85, 9, 121);
+    color: white;
     text-align: center;
+    border-radius: 50%;
+    padding: 5px;
+    text-decoration: none;
 }
 
+.siguiente {
+    display: block;
+    background: rgb(85, 9, 121);
+    color: white;
+    height: 40px;
+    width: 40px;
+    text-decoration: none;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 35px;        
+}
 
 
 
@@ -527,8 +672,6 @@
         width: 100%;
     }
 
-    /* CURSOS */
-
 }
 
 
@@ -569,9 +712,13 @@
     
 
     /* CURSOS */
-    .seccion__curso img {
-        width: 70%;
+    .seccion__curso .img1 {
+        width: 22rem;
         height: auto;
+    }
+
+    .seccion__curso .img2 {
+        width: 15rem;
     }
 
     .articulo__tabla table {
