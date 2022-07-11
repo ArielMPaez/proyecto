@@ -387,11 +387,6 @@
     text-align: center;
 }
 
-.articulo__tabla{
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
 
 
 
@@ -722,7 +717,7 @@
     }
 
     .articulo__tabla table {
-        font-size: 90%;
+        font-size: 82%;
     } 
 
 }
